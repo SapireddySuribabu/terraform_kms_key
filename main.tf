@@ -19,12 +19,12 @@ resource "aws_kms_ciphertext" "oauth" {
 }
 EOF
 }
-resource "aws_kms_custom_key_store" "test" {
-  cloud_hsm_cluster_id  = var.cloud_hsm_cluster_id
-  custom_key_store_name = "kms-custom-key-store-test"
-  key_store_password    = "noplaintextpasswords1"
-  trust_anchor_certificate = file("anchor-certificate.crt")
-}
+# resource "aws_kms_custom_key_store" "test" {
+#   cloud_hsm_cluster_id  = var.cloud_hsm_cluster_id
+#   custom_key_store_name = "kms-custom-key-store-test"
+#   key_store_password    = "noplaintextpasswords1"
+#   trust_anchor_certificate = file("anchor-certificate.crt")
+# }
 resource "aws_iam_role" "a" {
   name = var.name
   assume_role_policy = <<EOF

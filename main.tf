@@ -72,3 +72,8 @@ resource "aws_kms_replica_key" "replica" {
   deletion_window_in_days = var.kms_deletion_window_in_days
   primary_key_arn         = aws_kms_key.primary.arn
 }
+
+resource "aws_kms_key" "example" {
+  enable_key_rotation = true
+  # other required fields here
+}

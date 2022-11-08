@@ -77,3 +77,7 @@ resource "aws_kms_key" "example" {
   enable_key_rotation = true
   # other required fields here
 }
+resource "aws_kms_key" "kms_key_1" {
+  is_enabled              = true
+ enable_key_rotation    = true
+}

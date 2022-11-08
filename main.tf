@@ -73,11 +73,11 @@ resource "aws_kms_replica_key" "replica" {
   primary_key_arn         = aws_kms_key.primary.arn
 }
 
-resource "aws_kms_key" "example" {
-  enable_key_rotation = true
-  # other required fields here
-}
-resource "aws_kms_key" "kms_key_1" {
-  is_enabled              = true
- enable_key_rotation    = true
-}
+# resource "aws_kms_key" "example" {
+#   enable_key_rotation = true
+#   # other required fields here
+# }
+# resource "aws_kms_key" "kms_key_1" {
+#   is_enabled              = true
+#  enable_key_rotation    = true
+# }
